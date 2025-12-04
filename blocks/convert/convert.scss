@@ -1,0 +1,41 @@
+.convert {
+	display: flex;
+	justify-content: center;
+	padding-top: 80px;
+	padding-bottom: 86px;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		cursor: pointer;
+
+		@keyframes rotate {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		&.is-rotating img {
+			animation: rotate 0.5s linear forwards;
+		}
+
+		img {
+			width: 24px;
+			height: 24px;
+			transition: transform 0.2s ease;
+		}
+
+		span {
+			font-family: "Lato-Bold";
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 160%;
+			letter-spacing: 0%;
+			color: #424551;
+		}
+	}
+}

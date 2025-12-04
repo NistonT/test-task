@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+	padding-top: 50px;
+	max-width: 1230px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: -1;
+
+	&__shapes_first {
+		position: absolute;
+		top: 50%;
+		left: 20px;
+	}
+
+	&__shapes {
+		position: absolute;
+		bottom: 0px;
+		right: 72px;
+	}
+
+	&__dots {
+		position: absolute;
+		top: 50px;
+		right: 0px;
+	}
+}
+
+@import "./font.scss";
+@import "./../blocks/header/header.scss";
+@import "./../blocks/section/section.scss";
+@import "./../blocks/convert/convert.scss";

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+		<link rel="stylesheet" href="./style/style.scss" />
+	</head>
+	<body>
+		<div class="background">
+			<img
+				class="background__shapes_first"
+				src="./shapes-1.svg"
+				alt="shapes-1.svg"
+			/>
+			<img class="background__shapes" src="./shapes.svg" alt="shapes.svg" />
+			<img class="background__dots" src="./dots.svg" alt="dots.svg" />
+		</div>
+
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__title">
+					<h6>Enjoy your studying!</h6>
+					<h1>Our online courses</h1>
+				</div>
+				<div class="header__tabs">
+					<div class="header__tabs__filter">
+						<div
+							class="header__tabs__filter__block header__tabs__filter__block__active"
+						>
+							<span class="header__tabs__filter__block__name">All</span>
+							<span class="header__tabs__filter__block__length">0</span>
+						</div>
+						<div class="header__tabs__filter__block">
+							<span class="header__tabs__filter__block__name">Marketing</span>
+							<span class="header__tabs__filter__block__length">0</span>
+						</div>
+						<div class="header__tabs__filter__block">
+							<span class="header__tabs__filter__block__name">Management</span>
+							<span class="header__tabs__filter__block__length">0</span>
+						</div>
+						<div class="header__tabs__filter__block">
+							<span class="header__tabs__filter__block__name"
+								>HR & Recruting</span
+							>
+							<span class="header__tabs__filter__block__length">0</span>
+						</div>
+						<div class="header__tabs__filter__block">
+							<span class="header__tabs__filter__block__name">Design</span>
+							<span class="header__tabs__filter__block__length">0</span>
+						</div>
+						<div class="header__tabs__filter__block">
+							<span class="header__tabs__filter__block__name">Development</span>
+							<span class="header__tabs__filter__block__length">0</span>
+						</div>
+					</div>
+					<div class="header__tabs__search">
+						<div class="header__tabs__search__wrapper">
+							<input
+								type="text"
+								class="header__tabs__search__input"
+								placeholder="Search course..."
+							/>
+							<div class="header__tabs__search__wrapper__icon">
+								<img src="./search.svg" alt="search" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="section">
+				<div class="section__grid">
+					<!-- <div class="section__grid__block">
+						<div class="section__grid__block__image">
+							<img src="./TheUltimateGoogleAdsTrainingCourse.jpg" alt="image" />
+						</div>
+						<div class="section__grid__block__wrapper">
+							<div class="section__grid__block__wrapper__type">Marketing</div>
+							<div class="section__grid__block__wrapper__title">
+								The Ultimate Google Ads Training Course
+							</div>
+							<div class="section__grid__block__wrapper__info">
+								<div class="section__grid__block__wrapper__info__price">
+									$100
+								</div>
+								<div class="section__grid__block__wrapper__info__divider"></div>
+								<div class="section__grid__block__wrapper__info__author">
+									by Jerome Bell
+								</div>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</section>
+
+			<div class="convert">
+				<div class="convert__wrapper">
+					<img src="./Convert.svg" alt="convert" />
+					<span>Load more</span>
+				</div>
+			</div>
+		</div>
+
+		<script type="module" src="./main.js"></script>
+	</body>
+</html>

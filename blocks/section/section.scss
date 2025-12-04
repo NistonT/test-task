@@ -1,0 +1,111 @@
+.section {
+	padding-top: 60px;
+	margin: 0 auto;
+	max-width: 1230px;
+	width: 100%;
+	box-sizing: border-box;
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+
+		@media (max-width: 992px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: 576px) {
+			grid-template-columns: 1fr;
+		}
+
+		&__block {
+			width: 390px;
+			height: 438px;
+			background: white;
+			border: 1px solid #e5e8ed;
+			border-radius: 4px;
+
+			box-shadow: 0px 4px 4px -4px #1e212c08;
+			box-shadow: 0px 12px 10px -6px #9a9ca50a;
+			box-shadow: 0px 30px 24px -10px #9a9ca50d;
+			box-shadow: 0px 80px 80px -20px #9a9ca514;
+
+			&__image {
+				max-width: 390px;
+				max-height: 240px;
+				overflow: hidden;
+				border-radius: 4px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					border-top-left-radius: 4px;
+					border-top-right-radius: 4px;
+				}
+			}
+
+			&__wrapper {
+				padding: 24px;
+				position: relative;
+
+				&__type {
+					background: #03cea4;
+					display: inline-block;
+
+					border-radius: 4px;
+					padding-top: 1px;
+					padding-right: 8px;
+					padding-bottom: 1px;
+					padding-left: 8px;
+
+					font-family: "Lato-Regular";
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 150%;
+					letter-spacing: 0%;
+					color: white;
+				}
+
+				&__title {
+					margin-top: 20px;
+					margin-bottom: 20px;
+					font-family: "Lato-Bold";
+					font-weight: 700;
+					font-size: 20px;
+					line-height: 150%;
+					letter-spacing: 0%;
+				}
+
+				&__info {
+					display: flex;
+					align-items: center;
+					gap: 8px;
+
+					&__price {
+						font-family: "Lato-Bold";
+						font-weight: 700;
+						font-size: 18px;
+						line-height: 150%;
+						letter-spacing: 0%;
+						color: #ff4242;
+					}
+
+					&__divider {
+						color: #787a80;
+						height: 16px;
+						border: 1px solid #787a80;
+					}
+
+					&__author {
+						font-family: "Lato-Regular";
+						font-weight: 400;
+						font-size: 18px;
+						line-height: 150%;
+						letter-spacing: 0%;
+						color: #787a80;
+					}
+				}
+			}
+		}
+	}
+}
