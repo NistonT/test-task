@@ -16,31 +16,50 @@ const searchInput = document.querySelector(".header__tabs__search__input");
 
 let currentQuery = "";
 
+function getTypeColor(type) {
+	const colorMap = {
+		Marketing: "#03CEA4",
+		Management: "#5A87FC",
+		"HR & Recruting": "#F89828",
+		Design: "#F52F6E",
+		Development: "#7772F1",
+	};
+	return colorMap[type] || "#03CEA4";
+}
+
 export function renderCards(items) {
 	gridContainer.innerHTML = items
 		.map(
 			item => `
-      <div class="section__grid__block">
-        <div class="section__grid__block__image">
-          <img src="${item.image}" alt="${item.title}" />
-        </div>
-        <div class="section__grid__block__wrapper">
-          <div class="section__grid__block__wrapper__type">${item.type}</div>
-          <div class="section__grid__block__wrapper__title">${item.title}</div>
-          <div class="section__grid__block__wrapper__info">
-            <div class="section__grid__block__wrapper__info__price">$${item.price}</div>
-            <div class="section__grid__block__wrapper__info__divider"></div>
-            <div class="section__grid__block__wrapper__info__author">
-              by ${item.author}
+        <div class="section__grid__block">
+          <div class="section__grid__block__image">
+            <img src="${item.image}" alt="${item.title}" />
+          </div>
+          <div class="section__grid__block__wrapper">
+            <div 
+              class="section__grid__block__wrapper__type"
+              style="background-color: ${getTypeColor(item.type)};"
+            >
+              ${item.type}
+            </div>
+            <div class="section__grid__block__wrapper__title">${
+							item.title
+						}</div>
+            <div class="section__grid__block__wrapper__info">
+              <div class="section__grid__block__wrapper__info__price">$${
+								item.price
+							}</div>
+              <div class="section__grid__block__wrapper__info__divider"></div>
+              <div class="section__grid__block__wrapper__info__author">
+                by ${item.author}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    `
+      `
 		)
 		.join("");
 }
-
 export function getActiveCategories() {
 	const activeBlocks = filterContainer.querySelectorAll(
 		".header__tabs__filter__block__active"
